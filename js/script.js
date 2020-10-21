@@ -13,6 +13,3 @@ else if(randomNumber == 2){
 else if(randomNumer == 3){
     computerMove = 'nożyce';
 }
-
-printMessage('Mój ruch to: ' + computerMove);
-​
