@@ -1,4 +1,6 @@
-function getMoveName(argMovedId){
+function playGame (playerInput){
+  function clearMessages{}
+  function getMoveName(argMovedId){
   if(argMovedId == 1){
     return 'kamień';
   }
@@ -13,7 +15,7 @@ function getMoveName(argMovedId){
   }
 }
 
-function displayResult(argComputerMove, argPlayerMove){
+  function displayResult(argComputerMove, argPlayerMove){
   printMessage('Twój ruch to: ' + argPlayerMove);
   if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
     printMessage('Ty wygrywasz!');
@@ -43,15 +45,47 @@ function displayResult(argComputerMove, argPlayerMove){
     printMessage('Remis!');
   }
 }
-let randomNumber = Math.floor(Math.random() * 3 + 1);
-console.log('Wylosowana liczba to: ' + randomNumber);
-let computerMove = getMoveName(randomNumber);
+  let randomNumber = Math.floor(Math.random() * 3 + 1);
+  console.log('Wylosowana liczba to: ' + randomNumber);
+  let computerMove = getMoveName(randomNumber);
 
-printMessage('Mój ruch to: ' + computerMove);
+  printMessage('Mój ruch to: ' + computerMove);
 
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+  //let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
-console.log('Gracz wpisał: ' + playerInput);
+  console.log('Gracz wpisał: ' + playerInput);
 
-let playerMove = getMoveName(playerInput);
-displayResult(computerMove, playerMove);
+  let playerMove = getMoveName(playerInput);
+  displayResult(computerMove, playerMove);
+
+  function buttonClicked(){
+    printMessage('Guzik został kliknięty');
+  }
+  
+  let testButton = document.getElementById('play-rock');
+    
+  
+  testButton.addEventListener('click', buttonClicked);
+
+  function buttonClicked(){
+    printMessage('Guzik został kliknięty');
+  }
+  
+  let testButton = document.getElementById('play-paper');
+    
+  
+  testButton.addEventListener('click', buttonClicked);
+
+  function buttonClicked(){
+    printMessage('Guzik został kliknięty');
+  }
+  
+  let testButton = document.getElementById('play-scissors');
+    
+  
+  testButton.addEventListener('click', buttonClicked);
+
+
+  
+}
+
